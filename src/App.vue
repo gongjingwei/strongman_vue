@@ -1,23 +1,44 @@
 <template>
   <div id="app" style="background-color: yellow">
     <img src="./assets/logo.png">
+
     <el-button>
       AAA
     </el-button>
-    <el-input v-model="aaa"></el-input>
-    <router-view></router-view>
+
   </div>
 </template>
 
 <script>
   export default {
     name: 'App',
-    data(){
 
-      return{
-        aaa:"Element-UI 文本框"
+    mounted () {
+
+      this.send()
+
+    },
+    data () {
+
+      return {}
+    },
+
+    methods: {
+
+      send () {
+
+        this.$http.post('/user/list', {a: 1, b: 2}).then(res => {
+
+          console.info('成功了......', res)
+
+        }, err => {
+
+          console.info(err)
+
+        })
 
       }
+
     }
   }
 </script>
