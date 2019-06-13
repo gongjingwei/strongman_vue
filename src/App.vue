@@ -1,12 +1,9 @@
 <template>
-  <div id="app" style="background-color: yellow">
-    <img src="./assets/logo.png">
+  <div id="app">
 
-    <el-button>
-      AAA
-    </el-button>
-
+    <router-view></router-view>
   </div>
+
 </template>
 
 <script>
@@ -15,7 +12,7 @@
 
     mounted () {
 
-      this.send()
+      //this.send()
 
     },
     data () {

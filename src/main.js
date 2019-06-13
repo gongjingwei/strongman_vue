@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Api from './api/index.js'
+
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
@@ -55,7 +55,6 @@ Vue.http.interceptors.push(function (request, next) {
 })
 
 Vue.use(ElementUI)
-Vue.prototype.$api = Api
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
