@@ -111,7 +111,6 @@
 
     </el-table>
 
-    {{tableData}}
 
   </div>
 </template>
